@@ -1,0 +1,85 @@
+@bgc: rgb(233, 219, 219);
+
+.SaoLeiGame {
+  text-align: center;
+  .GameArea {
+    position: relative;
+    margin: 20px auto;
+
+    .GameCeil {
+      position: relative;
+      box-sizing: border-box;
+      background-color: rgb(240, 240, 240);
+      border-radius: 3px;
+      float: left;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .mask {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @bgc;
+        border: 2px outset rgb(223, 223, 223);
+
+        &:hover {
+          background-color: @bgc - rgb(20, 20, 20);
+        }
+
+        .flag {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      span {
+        display: block;
+        widows: 100%;
+        height: 100%;
+      }
+    }
+
+    .win,
+    .lose {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: red;
+    }
+
+    .lose {
+      color: black;
+    }
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .info{
+    display: inline-block;
+    width: 80px;
+    font-style: normal;
+  }
+
+}
+
+.clicked {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(223, 223, 223);
+}
